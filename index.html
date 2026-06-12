@@ -1,42 +1,27 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroPrever - Painel do Produtor</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
+<section class="card">
+    <h2>🧮 Calculadora de Produção</h2>
+    <div class="form-grupo">
+        <label for="hectares">Tamanho da Área (Hectares):</label>
+        <input type="number" id="hectares" placeholder="Ex: 10" min="1">
+    </div>
+    <div class="form-grupo">
+        <label for="cultura">Cultura Praticada:</label>
+        <select id="cultura">
+            <option value="soja">Soja</option>
+            <option value="milho">Milho</option>
+            <option value="trigo">Trigo</option>
+        </select>
+    </div>
+    <button class="btn-atualizar" id="btnCalcular">Calcular Estimativa</button>
+    <div id="resultadoCalculo" class="resultado-box" style="display: none;">
+        </div>
+</section>
 
-    <header class="navbar">
-        <h1>🌱 AgroPrever</h1>
-        <p>Agrinho 2026 - Categoria Front-End</p>
-    </header>
-
-    <main class="dashboard-container">
-        
-        <section class="card">
-            <h2>🌦️ Previsão do Tempo</h2>
-            <div class="clima-info">
-                <h3>Paraná, BR</h3>
-                <p class="temperatura">26°C</p>
-                <p>Sol com poucas nuvens</p>
-            </div>
-            <button class="btn-atualizar" id="btnClima">Atualizar Dados</button>
-        </section>
-
-        <section class="card grafico">
-            <h2>💧 Umidade do Solo</h2>
-            <canvas id="graficoUmidade"></canvas>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2026 - Desenvolvido para o Concurso Agrinho</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+<section class="card sustentabilidade">
+    <h2>🍃 Boas Práticas Agrícolas</h2>
+    <ul class="lista-dicas">
+        <li><strong>Rotação de Culturas:</strong> Alterne o plantio para manter o solo rico em nutrientes.</li>
+        <li><strong>Uso da Água:</strong> Irrigue nas horas mais frias do dia para evitar a evaporação rápida.</li>
+        <li><strong>Proteção do Solo:</strong> Mantenha a palhada da colheita anterior para proteger a terra da erosão.</li>
+    </ul>
+</section>
